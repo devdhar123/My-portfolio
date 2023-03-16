@@ -43,7 +43,7 @@
                 cursor: pointer;
                 position: relative;
 
-                &:hover .overlay{
+                &:hover .overlay {
                     opacity: 1;
                 }
 
@@ -61,7 +61,8 @@
                         }
                     }
                 }
-                .overlay{
+
+                .overlay {
                     position: absolute;
                     top: 0;
                     bottom: 0;
@@ -70,26 +71,27 @@
                     height: 100%;
                     width: 100%;
                     opacity: 0;
-                    transition:  0.5s ease;
+                    transition: 0.5s ease;
                     background-color: var(--yellow-theme-main-color);
 
-                    div{
+                    div {
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         text-align: center;
 
-                        p{
-                            color:#000 ;
+                        p {
+                            color: #000;
                             margin: 0px;
                             font-size: 4rem;
                             overflow: hidden;
                             position: relative;
                             white-space: nowrap;
-                            animation:  typingEffect 1s steps(30, end);
+                            animation: typingEffect 1s steps(30, end);
                         }
-                        .button{
+
+                        .button {
                             cursor: pointer;
                             margin-top: 30px;
                             padding: 5px 30px;
@@ -109,40 +111,120 @@
 
     }
 }
+
+.class-btn {
+    display: none;
+}
+
 @keyframes typingEffect {
-    from{
+    from {
         width: 0;
     }
-    to{
+
+    to {
         width: 100%;
     }
-    
-}
-@media only screen and (max-width:480px){
-    .portfolio__content__filter > li{
-        font-size: 11px;
-   }
-   .portfolio__content__cards{
-    grid-template-columns: repeat(1,1fr);
-   }
-  
-}
-@media only screen and (min-width:481px) and (max-width:767px){
-    .portfolio__content__filter > li{
-        font-size: 14px;
-   }
-   .portfolio__content__cards{
-    grid-template-columns: repeat(2,1fr);
-   }
-   .portfolio__content__cards__item{
-    grid-template-columns: repeat(2,1fr);
 
-    &__item{
-        .overlay{
-            div > p{
-                font-size: 1rem;
+}
+
+@media only screen and (max-width:480px) {
+    .portfolio__content__filter>li {
+        font-size: 11px;
+    }
+
+    .portfolio__content__cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media only screen and (min-width:481px) and (max-width:767px) {
+
+    .portfolio__content__filter>li {
+        font-size: 14px;
+    }
+
+    .portfolio__content__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio__content__cards__item {
+        grid-template-columns: repeat(2, 1fr);
+
+        &__item {
+            .overlay {
+                div>p {
+                    font-size: 1rem;
+                }
             }
         }
     }
-   }
+    .class-btn {
+        width: 70%;
+        display: block;
+        margin-left: 15%;
+        height: 40px;
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .class-btn button {
+        width: 120px;
+        height: 38px;
+        background: none;
+        border: 1px solid #74ccff;
+        color: #74ccff;
+    }
 }
+@media only screen and (min-width:414px){
+    .class-btn {
+        width: 100%;
+        display: block;
+        // margin-left: 15%;
+        height: 40px;
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .class-btn button {
+        width: 120px;
+        height: 38px;
+        background: none;
+        border: 1px solid #74ccff;
+        color: #74ccff;
+    }
+}
+@media only screen and (min-width:375px){
+    .class-btn {
+        width: 100%;
+        display: block;
+        // margin-left: 15%;
+        height: 50px;
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .class-btn button {
+        width: 100px;
+        height: 38px;
+        background: none;
+        border: 1px solid #74ccff;
+        color: #74ccff;
+    }
+}
+

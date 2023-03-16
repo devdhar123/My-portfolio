@@ -1,11 +1,11 @@
 import React from "react";
-import {BsInfoCircleFill} from 'react-icons/bs'
+import { BsInfoCircleFill } from 'react-icons/bs'
 import PageHeaderContnt from "../../components/pageHeaderContainer";
 import './style.scss'
 import { skillsData } from './utils'
-import {Line} from 'rc-progress'
+import { Line } from 'rc-progress'
 import { Animate, AnimateKeyframes } from "react-simple-animate";
-
+import { Link } from 'react-router-dom'
 
 const Skills = () => {
     return (
@@ -44,12 +44,12 @@ const Skills = () => {
                                             >
                                                 <div className="progressbar-wrapper" key={j}>
                                                     <p>{skillItem.skillName}</p>
-                                                    <Line 
-                                                    percent={skillItem.percentage}
-                                                    strokeWidth='2'
-                                                    strokeColor="var(--yellow-theme-main-color )"
-                                                    trailWidth={"2"}
-                                                    strokeLinecap="square"
+                                                    <Line
+                                                        percent={skillItem.percentage}
+                                                        strokeWidth='2'
+                                                        strokeColor="var(--yellow-theme-main-color )"
+                                                        trailWidth={"2"}
+                                                        strokeLinecap="square"
                                                     />
 
 
@@ -67,6 +67,18 @@ const Skills = () => {
                     )
                 }
             </div>
+            <div className="class-btn">
+                    <Link to={'/about'}>
+                        <button>ABOUT ME</button>
+                    </Link>
+
+                    <Link to={'/portfolio'}>
+                        <button>PORTFOLIO</button>
+                    </Link>
+                    <Link to={'/contact'}>
+                        <button>CONTACT</button>
+                    </Link>
+                </div>
         </section>
     )
 }

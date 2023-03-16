@@ -10,6 +10,8 @@ import ImageFive from '../../images/real.jpg'
 import ImageSix from '../../images/recipe.png'
 import ImageSeven from '../../images/small.png'
 import ImageEight from '../../images/todo.png'
+import { Link } from 'react-router-dom'
+
 
 import './style.scss'
 
@@ -153,6 +155,18 @@ const Portfolio = () => {
                 </div>
 
             </div>
+            <div className="class-btn">
+                    <Link to={'/about'}>
+                        <button>ABOUT ME</button>
+                    </Link>
+
+                    <Link to={'/skills'}>
+                        <button>SKILLS</button>
+                    </Link>
+                    <Link to={'/contact'}>
+                        <button>CONTACT</button>
+                    </Link>
+                </div>
         </section>
     )
 }

@@ -5,6 +5,7 @@ import './style.scss';
 import {Animate} from 'react-simple-animate'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom'
 
 const Contact =()=>{
     const form = useRef();
@@ -81,6 +82,18 @@ const Contact =()=>{
                 </Animate>
 
         </div>
+        <div className="class-btn">
+                    <Link to={'/about'}>
+                        <button>ABOUT ME</button>
+                    </Link>
+
+                    <Link to={'/skills'}>
+                        <button>SKILLS</button>
+                    </Link>
+                    <Link to={'/portfolio'}>
+                        <button>PORTFOLIO</button>
+                    </Link>
+                </div>
        </section>
     )
 }

@@ -1,0 +1,200 @@
+.home {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__text-wrapper {
+        display: flex;
+        // align-content: center;
+        // flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            color: var(--yellow-theme-main-color);
+            margin: 0px;
+            font-weight: 500;
+            font-size: 8rem;
+            line-height: 10rem;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typingEffectAnimation 2.5s steps(30,end);
+        }
+    }
+
+    &__contact-me{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+
+        button{
+            cursor: pointer;
+            padding: 10px 70px;
+            font-size: 2rem;
+            background: transparent;
+            color: var(--yellow-theme-main-color);
+            border: 1.5px solid var(--yellow-theme-main-color);
+            border-radius: 4px;
+            font-weight: 500;
+
+            &:hover{
+                background: var(--yellow-theme-main-color);
+                color: #000000;
+            }
+        }
+
+       
+    }
+}
+
+.icon-container{
+    width: 100%;
+    height: 25px;
+    // background-color: purple;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 100px;
+    
+}
+.icon-face{
+    font-size: 25px;
+    // border: 1px solid black;
+}
+.icon-face a {
+    text-decoration: none;
+    color: var(--yellow-theme-main-color);
+}
+.nav-item{
+   display: none;
+}
+
+@media only screen and (max-width : 550px) {
+    .home__text-wrapper h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    // .btn-btn{
+    //     width: 30px;
+    // }
+    .home__contact-me{
+        width: 100%;
+        // background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+        // margin-right: 50px;
+    }
+    .btn-btn1{
+        margin-right: 20px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-btn{
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20%;
+        width: 152%;
+        height: 72%;
+        // background-color: green;
+        margin-left: -28%;
+        
+    }
+    .nav-item button{
+        width: 120%;
+        height: 100%;
+        border: 1px solid #74ccff;
+        background:none;
+        color: #74ccff;
+        padding: 10px;
+        margin-right: 20%;
+
+    }
+   
+}
+
+@media only screen and (min-width : 551px) and (max-width : 768px) {
+    .home__text-wrapper h1 {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+    .nav-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20%;
+        width: 152%;
+        height: 72%;
+        // background-color: green;
+        margin-left: -28%;
+        
+    }
+    .nav-item button{
+        width: 120%;
+        height: 100%;
+        border: 1px solid #74ccff;
+        background:none;
+        color: #74ccff;
+        padding: 10px;
+        margin-right: 20%;
+
+    }
+   
+}
+
+@media only screen and (min-width : 769px) and (max-width : 990px) {
+    .home__text-wrapper h1 {
+        font-size: 6rem;
+        line-height: 8rem;
+    }
+    .nav-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20%;
+        width: 152%;
+        height: 72%;
+        // background-color: green;
+        margin-left: -28%;
+        
+    }
+    .nav-item button{
+        width: 120%;
+        height: 100%;
+        border: 1px solid #74ccff;
+        background:none;
+        color: #74ccff;
+        padding: 10px;
+        margin-right: 20%;
+
+    }
+   
+}
+
+@keyframes typingEffectAnimation{
+    from{
+        width: 0;
+
+    }
+    to{
+        width: 100%;
+    }
+
+    
+}
